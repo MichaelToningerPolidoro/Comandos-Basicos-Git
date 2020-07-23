@@ -35,9 +35,11 @@
   Clicando com o botão direito do mouse dentro do projeto criado, selecione a opção `git bash here` como ilustrado
   na imagem abaixo.
   
+  <br/>
   <p align="center">
-    <img src="" alt="right mouse button click">
+    <img src="images/gitBashHere.png" alt="git bash here">
   </p>
+  <br/>
   
   Após clicar, abrirá uma janela do git bash, então 2 comandos precisam ser executados uma única vez, sendo eles:
   - `git config --global user.name "Digite seu nome aqui"`
@@ -48,11 +50,12 @@
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="comandos-basicos">4. Comandos básicos</a>
-  Alguns comandos essenciais para se trabalhar com versionamento são:
+  Os comandos que serão apresentados são todos utilizados pelo terminal, alguns comandos essenciais para trabalhar com versionamento são:
+  
   - **git init**: Esse comando inicia uma pasta oculta com o nome de .git, com isso, se torna possível versionar o projeto
     localmente com o git.
     
-  - **git add \<nomeArquivo.extensao\>**: O git add adiciona as alterações realizadas no projeto e as coloca em uma espécie de
+  - **git add nomeArquivo.extensao**: O git add adiciona as alterações realizadas no projeto e as coloca em uma espécie de
     caixa/container, que irá guardar todas essas mudanças até que elas sejam "confirmadas". Digitando \* ao final do comando, fará
     com que todos os arquivos que possuem alguma alteração sejam adicionados nesse "container".
     
@@ -67,20 +70,74 @@
   salvando-as com um código hash, único para aquele commit.
   
   - **git log**: É o comando que realiza a busca e mostra quem, quando e os comentários de todos os commits realizados até o momento no
-    projeto, sendo possível também ver o código de cada commit.
+    projeto, sendo possível também ver o código de cada commit. Ao utilizar a tag --oneline após o comando, é mostrado o log de forma
+    mais simplificada.
     
     Imagem para ilustrar os comandos passados.
     
     <p align="center">
-      <img src="" alt="comandos básicos">
+      <img src="images/basicCommands.png" alt="basic commands">
     </p>
   
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="rastreando-versoes-anteriores">5. Rastreando versões anteriores</a>
+  Esses são comandos para "navegar" entre as versões do projeto, note que, a palavra HEAD ao lado do código hash indica em
+  qual versão você se encontra no momento
+  
+  - **git checkout hash**: Esse comando altera o projeto para a versão do código hash passado no lugar da palavra **hash**,
+    que pode ser obtido pelo **git log --oneline**, com isso é possível voltar uma ou várias versões do projeto.
+  
+  - **git checkout master**: Esse comando retorna o projeto para a sua versão mais recente (último commit).
+  
+  - **git reset --hard hash**: O git reset deve ser utilizado com cautela, ele faz um papel semlhante ao git checkout, mas ao
+    retornar o projeto para uma versão anterior utilizando esse comando, ele apaga os commit que estão "a frente" dele.
+    
+  Algumas imagens abaixo irão ilustrar o comando git reset Hard:
+  
+  <br/>
+  <p align="center">
+    <img src="" alt="before git reset hard">
+  </p>
+  <br/>
+  
+  <p align="center">
+    <img src="" alt="command git reset hard">
+  </p>
+  <br/>
+  
+  <p align="center">
+    <img src="" alt="after git reset hard">
+  </p>
+  <br/>
+  
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="ramificacoes">6. Branchs / Ramificações</a>
+  As branchs (ramificações), servem principalmente para realizar alterações em paralelo, podendo ser para testar uma funcionalidade
+  antes de colocá-la no ramo de produção ou até mesmo para diversos membros da equipe desenvolverem diversas funcionalidades em paralelo.
+  Sendo alguns desses comandos: 
+  
+  - **git branch**: Comando mostra em que branch você está.
+  
+  - **git checkout -b nomeRamificação**: Comando que cria uma nova nova ramificação no projeto.
+  
+  - **git checkout nomeRamificação**: Esse comando alterna entre as branchs, semelhante ao comando checkout com os códigos hashs.
+  
+  - **git merge nomeRamificação**: O comando de Merge (mesclar) une duas ramificações distintas, no caso, a branch que você se encontra
+    com a que foi passada no comando no lugar de **nomeRamificação**.
+    
+  Ao realizar o merge de duas branchs, podem ocorrer conflitos, e as seguintes opções aparecerão:
+  - **Accept current changes**: Mantém os arquivos pertencentes a branch atual.
+  
+  - **Accept incomming changes**: Mantém as alterações realizadas na branch passada em **nomeRamificação**.
+  
+  - **Accept both changes**: Aceita ambas as mudanças.
+  
+  - **Compare changes**: Compara as mudanças entre as branchs.
+  
+  E então, escolher a mais adequada para o momento, e continuar versionando o projeto.
+  
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="clonando-repositorios">7. Clonando repositórios</a>
