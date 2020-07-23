@@ -48,6 +48,33 @@
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="comandos-basicos">4. Comandos básicos</a>
+  Alguns comandos essenciais para se trabalhar com versionamento são:
+  - **git init**: Esse comando inicia uma pasta oculta com o nome de .git, com isso, se torna possível versionar o projeto
+    localmente com o git.
+    
+  - **git add \<nomeArquivo.extensao\>**: O git add adiciona as alterações realizadas no projeto e as coloca em uma espécie de
+    caixa/container, que irá guardar todas essas mudanças até que elas sejam "confirmadas". Digitando \* ao final do comando, fará
+    com que todos os arquivos que possuem alguma alteração sejam adicionados nesse "container".
+    
+  - **git reset HEAD**: Comando utilizado para retirar essas mudanças adicionadas através do **git add**, caso alguma alteração
+    tenha sido adicionada de forma equivocada.
+  
+  - **git status**: Este comando realiza a "consulta" e retorna o status atual do projeto, como por exemplo, se algum arquivo foi
+    alterado e não executou o comando git add, se ja estão, entre outras informações.
+  
+  - **git commit -m "Comentário"**: O git commit é o comando que realiza a "confirmação" dessas mudanças adicionadas com o **git add**,
+  passando junto um comentário para melhor entendimento do que foi alterado. Esse comando envia essas alterações para a pasta .git, e
+  salvando-as com um código hash, único para aquele commit.
+  
+  - **git log**: É o comando que realiza a busca e mostra quem, quando e os comentários de todos os commits realizados até o momento no
+    projeto, sendo possível também ver o código de cada commit.
+    
+    Imagem para ilustrar os comandos passados.
+    
+    <p align="center">
+      <img src="" alt="comandos básicos">
+    </p>
+  
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="rastreando-versoes-anteriores">5. Rastreando versões anteriores</a>
