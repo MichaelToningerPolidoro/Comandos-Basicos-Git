@@ -16,11 +16,10 @@
   7. [Enviando projeto local para o GitHub](#enviando-repositorio-local)
   8. [Clonando repositórios](#clonando-repositorios)
   9. [Atualizando repositório local](#atualizando-repositorio-local)
-  
 ***
 
 ## <a name="o-que-e-git">1. O que é GIT ?</a>  
-  O git é um sistema de gerenciamento de versões que armazena todas as mudanças realizadas em um projeto.  
+  O GIT é um sistema de gerenciamento de versões que armazena todas as mudanças realizadas em um projeto.  
   Com ele é possível recuperar versões anteriores desse projeto, que se enviado para um repositório remoto, 
   nesse caso, o GitHub, sua equipe poderá trabalhar junto nesse projeto.
   <br/><br/>[Voltar ao índice](#indice)
@@ -166,7 +165,7 @@
   
   - Vincular o repositório remoto com o projeto.
   
-  <br/>Os passos acima podem ser realizados com os seguintes comandos:
+  Os passos acima podem ser realizados com os seguintes comandos:
   
   - **git remote**: Verifica se há um repositório remoto vinculado ao projeto.
   
@@ -178,13 +177,18 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="clonando-repositorios">8.Clonando repostitórios</a>
-  Texto ...
+## <a name="clonando-repositorios">Clonando repostitórios</a>
+  Também é possível criar um projeto no GitHub e cloná-lo para sua máquina local, então esse projeto já ficará vinculado
+  ao repositório remoto de origem, ou seja, a URL do repositório clonado. Para fazer isso, abra o git bash no local do disco
+  que deseja salvar o projeto e então digite o comando:
+  
+  - **git clone URL**: Irá baixar todos os arquivos presentes naquele repositório.
+  
+  - **git push**: Esse comando fará com que as mudanças realizadas no projeto local, sejam enviadas para o repositório remoto.
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="atualizando-repositorio-local">9.Atualizando repositório local</a>
+## <a name="atualizando-repositorio-local">Atualizando repositório local</a>
   Texto ...
   
   <br/><br/>[Voltar ao índice](#indice)
-  
