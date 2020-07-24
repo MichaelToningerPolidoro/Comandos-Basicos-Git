@@ -13,8 +13,9 @@
   4. [Comandos básicos](#comandos-basicos)
   5. [Rastreando versões anteriores](#rastreando-versoes-anteriores)
   6. [Branchs / Ramificações](#ramificacoes)
-  7. [Clonando repositórios](#clonando-repositorios)
-  8. [Atualizando repositorio local](#atualizando-repositorio-local)
+  7. [Enviando projeto local para o GitHub](#enviando-repositorio-local)
+  8. [Clonando repositórios](#clonando-repositorios)
+  9. [Atualizando repositório local](#atualizando-repositorio-local)
   
 ***
 
@@ -83,7 +84,13 @@
   
 ## <a name="rastreando-versoes-anteriores">5. Rastreando versões anteriores</a>
   Esses são comandos para "navegar" entre as versões do projeto, note que, a palavra HEAD ao lado do código hash indica em
-  qual versão você se encontra no momento
+  qual versão você se encontra no momento.
+  
+  <br/>
+  <p align="center">
+    <img src="images/Head.png" alt="Head">
+  </p>
+  <br/>
   
   - **git checkout hash**: Esse comando altera o projeto para a versão do código hash passado no lugar da palavra **hash**,
     que pode ser obtido pelo **git log --oneline**, com isso é possível voltar uma ou várias versões do projeto.
@@ -97,17 +104,17 @@
   
   <br/>
   <p align="center">
-    <img src="" alt="before git reset hard">
+    <img src="images/beforeGitResetHard.png" alt="before git reset hard">
   </p>
   <br/>
   
   <p align="center">
-    <img src="" alt="command git reset hard">
+    <img src="images/commandGitResetHard.png" alt="command git reset hard">
   </p>
   <br/>
   
   <p align="center">
-    <img src="" alt="after git reset hard">
+    <img src="images/afterGitResetHard.png" alt="after git reset hard">
   </p>
   <br/>
   
@@ -138,10 +145,46 @@
   
   E então, escolher a mais adequada para o momento, e continuar versionando o projeto.
   
+  Imagem para ilustrar os comandos acima.
+  
+  <br/>
+  <p align="center">
+    <img src="images/gitBranchs.png" alt="git branch">
+  </p>
+  <br/>
+  
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="clonando-repositorios">7. Clonando repositórios</a>
+## <a name="enviando-repositorio-local">7. Enviando projeto local para o GitHub</a>
+  Ao versionar um projeto com GIT, esse processo ocorre em nossa máquina local, caso queira trabalhar em equipe, 
+  guardar uma cópia desse projeto ou disponibilizá-lo em um repositório remoto, é necessário seguir alguns passos,
+  sendo eles:
+  
+  - Verificar se um repositório remoto já está "vinculado" com o projeto.
+  
+  - Se não houver, criar um repositório remoto, nesse caso, no GitHub.
+  
+  - Vincular o repositório remoto com o projeto.
+  
+  <br/>Os passos acima podem ser realizados com os seguintes comandos:
+  
+  - **git remote**: Verifica se há um repositório remoto vinculado ao projeto.
+  
+  - **git remote add origin URL**: Vincula um repositório local com um remoto, através da URL fornecida.
+  
+  - **git push -u origin master**: Realiza o envio dos arquivos do repositório local para o remoto pela primeira vez.
+  
+  - **git remote -v**: Obtêm informações mais detalhadas sobre o repositório remoto.
+  
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="atualizando-repositorio-local">8. Atualizando repositorio local</a>
+## <a name="clonando-repositorios">8.Clonando repostitórios</a>
+  Texto ...
+  
   <br/><br/>[Voltar ao índice](#indice)
+  
+## <a name="atualizando-repositorio-local">9.Atualizando repositório local</a>
+  Texto ...
+  
+  <br/><br/>[Voltar ao índice](#indice)
+  
