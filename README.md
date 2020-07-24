@@ -148,7 +148,7 @@
   
   <br/>
   <p align="center">
-    <img src="images/gitBranchs.png" alt="git branch">
+    <img src="images/gitBranchs.png" alt="git branchs">
   </p>
   <br/>
   
@@ -177,7 +177,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="clonando-repositorios">Clonando repostitórios</a>
+## <a name="clonando-repositorios">8.Clonando repostitórios</a>
   Também é possível criar um projeto no GitHub e cloná-lo para sua máquina local, então esse projeto já ficará vinculado
   ao repositório remoto de origem, ou seja, a URL do repositório clonado. Para fazer isso, abra o git bash no local do disco
   que deseja salvar o projeto e então digite o comando:
@@ -188,7 +188,10 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="atualizando-repositorio-local">Atualizando repositório local</a>
-  Texto ...
+## <a name="atualizando-repositorio-local">9.Atualizando repositório local</a>
+  Caso esteja trabalhando em equipe, você pode digitar o comando `git pull` para baixar as alterações presentes no repositório remoto,
+  como um update.
+  
+  Espero ter conseguido mostrar de forma clara o funcionamento de alguns comandos em git, agradeço por ter lido!
   
   <br/><br/>[Voltar ao índice](#indice)
