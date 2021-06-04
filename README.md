@@ -19,9 +19,9 @@
 ***
 
 ## <a name="o-que-e-git">1. O que é GIT ?</a>  
-  O GIT é um sistema de gerenciamento de versões que armazena todas as mudanças realizadas em um projeto.  
-  Com ele é possível recuperar versões anteriores desse projeto, que se enviado para um repositório remoto, 
-  nesse caso, o GitHub, sua equipe poderá trabalhar junto nesse projeto.
+  O GIT é um sistema de gerenciamento de versões que armazena as mudanças realizadas em um projeto.  
+  Com ele é possível recuperar versões anteriores desse projeto, que quando enviado para um repositório remoto, 
+  nesse caso, o GitHub, sua equipe poderá trabalhar contigo nesse projeto.
   <br/><br/>[Voltar ao índice](#indice)
 
 ## <a name="instalacao">2. Instalando o GIT</a>
@@ -32,8 +32,7 @@
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="configurando">3. Configurando o GIT</a>  
-  Clicando com o botão direito do mouse dentro do projeto criado, selecione a opção `git bash here` como ilustrado
-  na imagem abaixo.
+  Após a instalação do git, clicando com o botão direito, selecione a opção `git bash here` como ilustrado na imagem abaixo.
   
   <br/>
   <p align="center">
@@ -42,35 +41,37 @@
   <br/>
   
   Após clicar, abrirá uma janela do git bash, então 2 comandos precisam ser executados uma única vez, sendo eles:
-  - `git config --global user.name "Digite seu nome aqui"`
-  - `git config --global user.email "Digite seu email aqui"`
+  - `git config --global user.name "<Seu nome>"`
+  - `git config --global user.email "<Seu email>"`
   
   Com isso, seu nome e email já estarão configurados na sua máquina, e todos os commits que você realizar aparecerá essas
   informações para confirmar que foi você quem fez tais alterações, esse comando será abordado em seguida.
   <br/><br/>[Voltar ao índice](#indice)
   
 ## <a name="comandos-basicos">4. Comandos básicos</a>
-  Os comandos que serão apresentados são todos utilizados pelo terminal, alguns comandos essenciais para trabalhar com versionamento são:
+  Os comandos que serão apresentados são todos utilizados pelo terminal. Esses comandos funcionarão (exceto `git init`) se a 
+  pasta/projeto atual estiverem sendo versionados, alguns comandos essenciais para trabalhar com versionamento são:
   
-  - **git init**: Esse comando inicia uma pasta oculta com o nome de .git, com isso, se torna possível versionar o projeto
-    localmente com o git.
+  - `git init`: Esse comando inicia uma pasta oculta com o nome de .git, com isso, se torna possível versionar o projeto
+    localmente com o git e então utilizar a vasta quantia de comandos que o git dispõe.
     
-  - **git add nomeArquivo.extensao**: O git add adiciona as alterações realizadas no projeto e as coloca em uma espécie de
-    caixa/container, que irá guardar todas essas mudanças até que elas sejam "confirmadas". Digitando \* ao final do comando, fará
-    com que todos os arquivos que possuem alguma alteração sejam adicionados nesse "container".
+  - `git add <nomeArquivo.extensao>`: O git add adiciona as alterações realizadas no projeto e as coloca em uma espécie de
+    caixa/container, que irá guardar todas essas mudanças até que elas sejam "confirmadas". Digitando `*` ou `.` no lugar do 
+    `<nomeArquivo.extensao>`, fará com que **todos** os arquivos que não estejam no arquivo `.gitignore` e que possuam alguma 
+    alteração, sejam adicionados nesse "container".
     
-  - **git reset HEAD**: Comando utilizado para retirar essas mudanças adicionadas através do **git add**, caso alguma alteração
+  - `git reset`: Comando utilizado para retirar essas mudanças adicionadas pelo `git add`, caso alguma alteração
     tenha sido adicionada de forma equivocada.
   
-  - **git status**: Este comando realiza a "consulta" e retorna o status atual do projeto, como por exemplo, se algum arquivo foi
+  - `git status`: Este comando realiza a "consulta" e retorna o status atual do projeto, como por exemplo, se algum arquivo foi
     alterado e não executou o comando git add, se ja estão, entre outras informações.
   
-  - **git commit -m "Comentário"**: O git commit é o comando que realiza a "confirmação" dessas mudanças adicionadas com o **git add**,
+  - `git commit -m "<Comentário>"`: O git commit é o comando que realiza a "confirmação" dessas mudanças adicionadas com o `git add`,
   passando junto um comentário para melhor entendimento do que foi alterado. Esse comando envia essas alterações para a pasta .git, e
   salvando-as com um código hash, único para aquele commit.
   
-  - **git log**: É o comando que realiza a busca e mostra quem, quando e os comentários de todos os commits realizados até o momento no
-    projeto, sendo possível também ver o código de cada commit. Ao utilizar a tag --oneline após o comando, é mostrado o log de forma
+  - `git log`: É o comando que realiza a busca e mostra quem, quando e os comentários de todos os commits realizados até o momento no
+    projeto, sendo possível também ver o código de cada commit. Ao utilizar a tag `--oneline` após o comando, é mostrado o log de forma
     mais simplificada.
     
     Imagem para ilustrar os comandos passados.
@@ -91,12 +92,12 @@
   </p>
   <br/>
   
-  - **git checkout hash**: Esse comando altera o projeto para a versão do código hash passado no lugar da palavra **hash**,
+  - `git checkout <hash>`: Esse comando altera o projeto para a versão do código hash passado no lugar da palavra **hash**,
     que pode ser obtido pelo **git log --oneline**, com isso é possível voltar uma ou várias versões do projeto.
   
-  - **git checkout master**: Esse comando retorna o projeto para a sua versão mais recente (último commit).
+  - `git checkout master`: Esse comando retorna o projeto para a sua versão mais recente (último commit).
   
-  - **git reset --hard hash**: O git reset deve ser utilizado com cautela, ele faz um papel semlhante ao git checkout, mas ao
+  - `git reset --hard <hash>`: O git reset deve ser utilizado com cautela, ele faz um papel semlhante ao git checkout, mas ao
     retornar o projeto para uma versão anterior utilizando esse comando, ele apaga os commit que estão "a frente" dele.
     
   Algumas imagens abaixo irão ilustrar o comando git reset Hard:
@@ -124,13 +125,13 @@
   antes de colocá-la no ramo de produção ou até mesmo para diversos membros da equipe desenvolverem diversas funcionalidades em paralelo.
   Sendo alguns desses comandos: 
   
-  - **git branch**: Comando mostra em que branch você está.
+  - `git branch`: Comando mostra em que branch você está.
   
-  - **git checkout -b nomeRamificação**: Comando que cria uma nova nova ramificação no projeto.
+  - `git checkout -b <nomeRamificação>`: Comando que cria uma nova nova ramificação no projeto.
   
-  - **git checkout nomeRamificação**: Esse comando alterna entre as branchs, semelhante ao comando checkout com os códigos hashs.
+  - `git checkout <nomeRamificação>`: Esse comando alterna entre as branchs, semelhante ao comando checkout com os códigos hashs.
   
-  - **git merge nomeRamificação**: O comando de Merge (mesclar) une duas ramificações distintas, no caso, a branch que você se encontra
+  - `git merge <nomeRamificação>`: O comando de Merge (mesclar) une duas ramificações distintas, no caso, a branch que você se encontra
     com a que foi passada no comando no lugar de **nomeRamificação**.
     
   Ao realizar o merge de duas branchs, podem ocorrer conflitos, e as seguintes opções aparecerão:
@@ -167,13 +168,13 @@
   
   Os passos acima podem ser realizados com os seguintes comandos:
   
-  - **git remote**: Verifica se há um repositório remoto vinculado ao projeto.
+  - `git remote`: Verifica se há um repositório remoto vinculado ao projeto.
   
-  - **git remote add origin URL**: Vincula um repositório local com um remoto, através da URL fornecida.
+  - `git remote add origin <URL>`: Vincula um repositório local com um remoto, através da URL fornecida.
   
-  - **git push -u origin master**: Realiza o envio dos arquivos do repositório local para o remoto pela primeira vez.
+  - `git push -u origin master`: Realiza o envio dos arquivos do repositório local para o remoto pela primeira vez.
   
-  - **git remote -v**: Obtêm informações mais detalhadas sobre o repositório remoto.
+  - `git remote -v`: Obtêm informações mais detalhadas sobre o repositório remoto.
   
   <br/><br/>[Voltar ao índice](#indice)
   
@@ -182,9 +183,9 @@
   ao repositório remoto de origem, ou seja, a URL do repositório clonado. Para fazer isso, abra o git bash no local do disco
   que deseja salvar o projeto e então digite o comando:
   
-  - **git clone URL**: Irá baixar todos os arquivos presentes naquele repositório.
+  - `git clone <URL>`: Irá baixar todos os arquivos presentes naquele repositório.
   
-  - **git push**: Esse comando fará com que as mudanças realizadas no projeto local, sejam enviadas para o repositório remoto.
+  - `git push`: Esse comando fará com que as mudanças realizadas no projeto local, sejam enviadas para o repositório remoto.
   
   <br/><br/>[Voltar ao índice](#indice)
   
