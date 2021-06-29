@@ -6,7 +6,7 @@
   <h3 align="center">Comandos básicos</h3> </br>
   
 ***
-## <a name="indice">Índice</a>
+## <a name="indice">Índice</a> :link:
   1. [O que é o GIT ?](#o-que-e-git)
   2. [Instalando o GIT](#instalacao)
   3. [Configurando o GIT](#configurando)
@@ -18,20 +18,20 @@
   9. [Atualizando repositório local](#atualizando-repositorio-local)
 ***
 
-## <a name="o-que-e-git">1. O que é GIT ?</a>  
+## <a name="o-que-e-git">1. O que é GIT ?</a> :grey_question:
   O GIT é um sistema de gerenciamento de versões que armazena as mudanças realizadas em um projeto.  
   Com ele é possível recuperar versões anteriores desse projeto, que quando enviado para um repositório remoto, 
   nesse caso, o GitHub, sua equipe poderá trabalhar contigo nesse projeto.
   <br/><br/>[Voltar ao índice](#indice)
 
-## <a name="instalacao">2. Instalando o GIT</a>
+## <a name="instalacao">2. Instalando o GIT</a> :computer:
   Para começar a utilizar o GIT é necessário instalá-lo em sua máquina local, acessando o próprio site
   da ferramenta na seção de downloads.
   <br/><br/>
   [https://git-scm.com/downloads](https://git-scm.com/downloads)
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="configurando">3. Configurando o GIT</a>  
+## <a name="configurando">3. Configurando o GIT</a> :wrench:
   Após a instalação do git, clicando com o botão direito, selecione a opção `git bash here` como ilustrado na imagem abaixo.
   
   <br/>
@@ -48,7 +48,7 @@
   informações para confirmar que foi você quem fez tais alterações, esse comando será abordado em seguida.
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="comandos-basicos">4. Comandos básicos</a>
+## <a name="comandos-basicos">4. Comandos básicos</a> :pencil2:
   Os comandos que serão apresentados são todos utilizados pelo terminal. Esses comandos funcionarão (exceto `git init`) se a 
   pasta/projeto atual estiverem sendo versionados, alguns comandos essenciais para trabalhar com versionamento são:
   
@@ -82,7 +82,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="rastreando-versoes-anteriores">5. Rastreando versões anteriores</a>
+## <a name="rastreando-versoes-anteriores">5. Rastreando versões anteriores</a> :mag:
   Esses são comandos para "navegar" entre as versões do projeto, note que, a palavra HEAD ao lado do código hash indica em
   qual versão você se encontra no momento.
   
@@ -120,7 +120,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="ramificacoes">6. Branchs / Ramificações</a>
+## <a name="ramificacoes">6. Branchs / Ramificações</a> :evergreen_tree:
   As branchs (ramificações), servem principalmente para realizar alterações em paralelo, podendo ser para testar uma funcionalidade
   antes de colocá-la no ramo de produção ou até mesmo para diversos membros da equipe desenvolverem diversas funcionalidades em paralelo.
   Sendo alguns desses comandos: 
@@ -133,6 +133,9 @@
   
   - `git merge <nomeRamificação>`: O comando de Merge (mesclar) une duas ramificações distintas, no caso, a branch que você se encontra
     com a que foi passada no comando no lugar de **nomeRamificação**.
+    
+  - `git branch -m <nomeAtual> <nomeDesejado>`: Esse comando renomeia a branch de <nomeAtual> para <nomeDesejado> por exemplo, alterar o nome
+    da master para main.
     
   Ao realizar o merge de duas branchs, podem ocorrer conflitos, e as seguintes opções aparecerão:
   - **Accept current changes**: Mantém os arquivos pertencentes a branch atual.
@@ -155,7 +158,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="enviando-repositorio-local">7. Enviando projeto local para o GitHub</a>
+## <a name="enviando-repositorio-local">7. Enviando projeto local para o GitHub</a> :arrow_up:
   Ao versionar um projeto com GIT, esse processo ocorre em nossa máquina local, caso queira trabalhar em equipe, 
   guardar uma cópia desse projeto ou disponibilizá-lo em um repositório remoto, é necessário seguir alguns passos,
   sendo eles:
@@ -178,7 +181,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="clonando-repositorios">8.Clonando repostitórios</a>
+## <a name="clonando-repositorios">8.Clonando repostitórios</a> :arrow_down:
   Também é possível criar um projeto no GitHub e cloná-lo para sua máquina local, então esse projeto já ficará vinculado
   ao repositório remoto de origem, ou seja, a URL do repositório clonado. Para fazer isso, abra o git bash no local do disco
   que deseja salvar o projeto e então digite o comando:
@@ -189,7 +192,7 @@
   
   <br/><br/>[Voltar ao índice](#indice)
   
-## <a name="atualizando-repositorio-local">9.Atualizando repositório local</a>
+## <a name="atualizando-repositorio-local">9.Atualizando repositório local</a> :heavy_check_mark:
   Caso esteja trabalhando em equipe, você pode digitar o comando `git pull` para baixar as alterações presentes no repositório remoto,
   como um update.
   
